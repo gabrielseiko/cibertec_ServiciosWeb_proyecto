@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLibreria", "ApiLibreria\ApiLibreria.csproj", "{C790DE5E-10A6-449E-80E4-3C443162DD66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiLibreria", "ApiLibreria\ApiLibreria.csproj", "{C790DE5E-10A6-449E-80E4-3C443162DD66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBook", "ApiBook\ApiBook.csproj", "{734164C0-1D27-46F6-8ED9-ACB405A54C17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCategory", "ApiCategory\ApiCategory.csproj", "{C1183EDA-667F-4A24-AF85-82CCE9B4E121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCustomer", "ApiCustomer\ApiCustomer.csproj", "{E3269824-66A7-4FDB-8355-DEC02EA0798A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiEmployee", "ApiEmployee\ApiEmployee.csproj", "{077265BD-96D0-4DFD-A994-75BD88F404EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiShoppingCart", "ApiShoppingCart\ApiShoppingCart.csproj", "{9E3510E3-AC8E-4874-ABE1-63319A2B709E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{C790DE5E-10A6-449E-80E4-3C443162DD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C790DE5E-10A6-449E-80E4-3C443162DD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C790DE5E-10A6-449E-80E4-3C443162DD66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734164C0-1D27-46F6-8ED9-ACB405A54C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734164C0-1D27-46F6-8ED9-ACB405A54C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734164C0-1D27-46F6-8ED9-ACB405A54C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734164C0-1D27-46F6-8ED9-ACB405A54C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1183EDA-667F-4A24-AF85-82CCE9B4E121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1183EDA-667F-4A24-AF85-82CCE9B4E121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1183EDA-667F-4A24-AF85-82CCE9B4E121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1183EDA-667F-4A24-AF85-82CCE9B4E121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3269824-66A7-4FDB-8355-DEC02EA0798A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3269824-66A7-4FDB-8355-DEC02EA0798A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3269824-66A7-4FDB-8355-DEC02EA0798A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3269824-66A7-4FDB-8355-DEC02EA0798A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077265BD-96D0-4DFD-A994-75BD88F404EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077265BD-96D0-4DFD-A994-75BD88F404EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077265BD-96D0-4DFD-A994-75BD88F404EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077265BD-96D0-4DFD-A994-75BD88F404EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3510E3-AC8E-4874-ABE1-63319A2B709E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3510E3-AC8E-4874-ABE1-63319A2B709E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3510E3-AC8E-4874-ABE1-63319A2B709E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3510E3-AC8E-4874-ABE1-63319A2B709E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
