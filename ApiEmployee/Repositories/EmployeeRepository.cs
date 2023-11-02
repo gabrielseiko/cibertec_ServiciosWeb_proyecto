@@ -35,6 +35,10 @@ namespace ApiEmployee.Repositories
         public async Task<Employee> GetEmployeeById(string idEmployee)
         {
             var employee = await dbContext.Employees.Where(e => e.IdEmployee == idEmployee).FirstOrDefaultAsync();
+            if (employee == null)
+            {
+                throw new NotFoundException($"Employee not found with id {idEmployee}");
+            }
             return employee;
         }
 
