@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Configurando el DBContexts para usar SQL Server
-var connectionString = builder.Configuration.GetConnectionString("EmployeeDB");
+var connectionString = builder.Configuration.GetConnectionString("DBEmployee");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 // Configurando la inyeccion de dependencia

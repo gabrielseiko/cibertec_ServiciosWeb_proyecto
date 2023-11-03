@@ -14,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Configurando el DBContexts para usar SQL Server
-var connectionString = builder.Configuration.GetConnectionString("CartDB");
+var connectionString = builder.Configuration.GetConnectionString("DBCart");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
 // Configurando la inyeccion de dependencia para ICustomerRepository
