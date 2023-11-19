@@ -7,9 +7,9 @@ namespace ApiCategory.Repositories
         //CRUD
         public Task<IEnumerable<Category>> GetCategories();
         public Task<IEnumerable<Category>> GetCategories(int page, int size);
-        public Task<Category> GetCategoryById(string idCategory);
+        public Task<Category> GetCategoryById(int idCategory);
         public Task<Category> CreateCategory(Category category);
         public Task<Category> UpdateCategory(Category category);    
-        public Task<bool> DeleteCategory(string idCategory); 
+        public Task<bool> DeleteCategory(int idCategory); 
     }
 }

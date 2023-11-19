@@ -20,7 +20,7 @@ namespace ApiEmployee.Repositories
             return employee;
         }
 
-        public async Task<bool> DeleteEmployee(string idEmployee)
+        public async Task<bool> DeleteEmployee(int idEmployee)
         {
             var employee = await dbContext.Employees.FirstOrDefaultAsync(e => e.IdEmployee == idEmployee);
             if (employee == null)
@@ -32,7 +32,7 @@ namespace ApiEmployee.Repositories
             return true;
         }
 
-        public async Task<Employee> GetEmployeeById(string idEmployee)
+        public async Task<Employee> GetEmployeeById(int idEmployee)
         {
             var employee = await dbContext.Employees.Where(e => e.IdEmployee == idEmployee).FirstOrDefaultAsync();
             if (employee == null)

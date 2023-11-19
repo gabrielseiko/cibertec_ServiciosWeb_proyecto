@@ -2,7 +2,7 @@
 {
     public class Employee
     {
-        public string? IdEmployee { get; set; }
+        public int IdEmployee { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }
         public string? Dni { get; set; }

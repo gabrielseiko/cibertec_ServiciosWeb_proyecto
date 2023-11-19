@@ -46,13 +46,7 @@ namespace ApiShoppingCart.Controllers
                 await cartRepository.GetOrderByCustomer(idCustomer));
         }
 
-        [HttpGet]
-        [Route("GetOrderByEmployee/{idEmployee}")]
-        public async Task<ActionResult<Order>> GetOrderByEmployee(string idEmployee)
-        {
-            return StatusCode(StatusCodes.Status200OK,
-                await cartRepository.GetOrderByEmployee(idEmployee));
-        }
+        
 
     }
 }

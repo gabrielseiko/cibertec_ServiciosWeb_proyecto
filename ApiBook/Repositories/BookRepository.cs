@@ -20,7 +20,7 @@ namespace ApiLibreria.Repositories
             return book;
         }
 
-        public async Task<bool> DeleteBook(string idBook)
+        public async Task<bool> DeleteBook(int idBook)
         {
             var book = await dbContext.Books.FirstOrDefaultAsync(b => b.IdBook == idBook);
             if(book == null)
@@ -32,7 +32,7 @@ namespace ApiLibreria.Repositories
             return true;
         }
 
-        public async Task<Book> GetBookById(string idBook)
+        public async Task<Book> GetBookById(int idBook)
         {
             var book = await dbContext.Books.Where(b => b.IdBook == idBook).FirstOrDefaultAsync();
             return book;

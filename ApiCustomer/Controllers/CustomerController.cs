@@ -31,7 +31,7 @@ namespace ApiCustomer.Controllers
 
         [HttpGet]
         [Route("GetCustomerById/{idCustomer}")]
-        public async Task<ActionResult<Customer>> GetCustomerById(string idCustomer)
+        public async Task<ActionResult<Customer>> GetCustomerById(int idCustomer)
         {
             return StatusCode(StatusCodes.Status200OK, await customerRepository.GetCustomerById(idCustomer));
         }
@@ -52,7 +52,7 @@ namespace ApiCustomer.Controllers
 
         [HttpDelete]
         [Route("DeleteCustomer")]
-        public async Task<ActionResult<bool>> DeleteCustomer(string idCustomer)
+        public async Task<ActionResult<bool>> DeleteCustomer(int idCustomer)
         {
             return StatusCode(StatusCodes.Status200OK, await customerRepository.DeleteCustomer(idCustomer));
         }

@@ -31,7 +31,7 @@ namespace ApiBook.Controllers
 
         [HttpGet]
         [Route("GetBookById/{idBook}")]
-        public async Task<ActionResult<Book>> GetBookById(string idBook)
+        public async Task<ActionResult<Book>> GetBookById(int idBook)
         {
             return StatusCode(StatusCodes.Status200OK, await bookRepository.GetBookById(idBook));
         }
@@ -52,7 +52,7 @@ namespace ApiBook.Controllers
 
         [HttpDelete]
         [Route("DeleteBook")]
-        public async Task<ActionResult<bool>> DeleteBook(string idBook)
+        public async Task<ActionResult<bool>> DeleteBook(int idBook)
         {
             return StatusCode(StatusCodes.Status200OK, await bookRepository.DeleteBook(idBook));
         }

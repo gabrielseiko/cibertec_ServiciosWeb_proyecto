@@ -21,7 +21,7 @@ namespace ApiCustomer.Repositories
             return customer;
         }
 
-        public async Task<bool> DeleteCustomer(string idCustomer)
+        public async Task<bool> DeleteCustomer(int idCustomer)
         {
             var customer = await dbContext.Customers.FirstOrDefaultAsync(c => c.IdCustomer == idCustomer);
             if (customer == null)
@@ -33,7 +33,7 @@ namespace ApiCustomer.Repositories
             return true;
         }
 
-        public async Task<Customer> GetCustomerById(string idCustomer)
+        public async Task<Customer> GetCustomerById(int idCustomer)
         {
             var customer = await dbContext.Customers.Where(c => c.IdCustomer == idCustomer).FirstOrDefaultAsync();
             return customer;

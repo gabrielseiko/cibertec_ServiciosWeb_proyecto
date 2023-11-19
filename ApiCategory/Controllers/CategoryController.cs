@@ -31,7 +31,7 @@ namespace ApiCategory.Controllers
 
         [HttpGet]
         [Route("GetCategoryById/{idCategory}")]
-        public async Task<ActionResult<Category>> GetCategoryById(string idCategory)
+        public async Task<ActionResult<Category>> GetCategoryById(int idCategory)
         {
             return StatusCode(StatusCodes.Status200OK, await categoryRepository.GetCategoryById(idCategory));
         }
@@ -53,7 +53,7 @@ namespace ApiCategory.Controllers
 
         [HttpDelete]
         [Route("DeleteCategory")]
-        public async Task<ActionResult<bool>> DeleteCategory(string idCategory)
+        public async Task<ActionResult<bool>> DeleteCategory(int idCategory)
         {
             return StatusCode(StatusCodes.Status200OK, await categoryRepository.DeleteCategory(idCategory));
         }

@@ -21,7 +21,7 @@ namespace ApiCategory.Repositories
             return category;
         }
 
-        public async Task<bool> DeleteCategory(string idCategory)
+        public async Task<bool> DeleteCategory(int idCategory)
         {
             var category = await dbContext.Categories.FirstOrDefaultAsync(c => c.IdCategory == idCategory);
             if (category == null)
@@ -55,7 +55,7 @@ namespace ApiCategory.Repositories
             return result;
         }
 
-        public async Task<Category> GetCategoryById(string idCategory)
+        public async Task<Category> GetCategoryById(int idCategory)
         {
             var category = await dbContext.Categories.Where(c => c.IdCategory == idCategory).FirstOrDefaultAsync();
             return category;

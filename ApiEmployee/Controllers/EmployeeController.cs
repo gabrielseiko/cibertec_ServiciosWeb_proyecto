@@ -32,7 +32,7 @@ namespace ApiEmployee.Controllers
 
         [HttpGet]
         [Route("GetEmployeeById/{idEmployee}")]
-        public async Task<ActionResult<Employee>> GetEmployeeById(string idEmployee)
+        public async Task<ActionResult<Employee>> GetEmployeeById(int idEmployee)
         {
             return StatusCode(StatusCodes.Status200OK,
                 await employeeRepository.GetEmployeeById(idEmployee));
@@ -56,7 +56,7 @@ namespace ApiEmployee.Controllers
 
         [HttpDelete]
         [Route("DeleteEmployee")]
-        public async Task<ActionResult<bool>> DeleteEmployee(string idEmployee)
+        public async Task<ActionResult<bool>> DeleteEmployee(int idEmployee)
         {
             return StatusCode(StatusCodes.Status200OK,
                 await employeeRepository.DeleteEmployee(idEmployee));

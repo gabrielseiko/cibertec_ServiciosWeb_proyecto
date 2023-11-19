@@ -42,15 +42,7 @@ namespace ApiShoppingCart.Repositories
             return order;
         }
 
-        public async Task<Order> GetOrderByEmployee(string idEmployee)
-        {
-            var order = await dbContext.Orders.Where(o => o.IdEmployee == idEmployee).FirstOrDefaultAsync();
-            if (order == null)
-            {
-                throw new NotFoundException($"Order not found with employee {idEmployee}");
-            }
-            return order;
-        }
+ 
 
         public async Task<Order> GetOrderById(string idOrder)
         {
