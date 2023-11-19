@@ -1,7 +1,10 @@
-﻿namespace ApiBook.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiBook.Models
 {
     public class Book
     {
+        [Key]
         public int IdBook { get; set; }
         public string? Title { get; set; }
         public string? Author { get; set; }

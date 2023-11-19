@@ -1,7 +1,10 @@
-﻿namespace ApiCustomer.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiCustomer.Models
 {
     public class Customer
     {
+        [Key]
         public int IdCustomer { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }

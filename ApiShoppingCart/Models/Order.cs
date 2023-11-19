@@ -1,7 +1,10 @@
-﻿namespace ApiShoppingCart.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiShoppingCart.Models
 {
     public class Order
     {
+        [Key]
         public string? IdOrder { get; set; }
         public string? IdCustomer { get; set; }
         public string? CustomerName { get; set; }
