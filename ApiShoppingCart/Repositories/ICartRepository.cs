@@ -7,7 +7,7 @@ namespace ApiShoppingCart.Repositories
         public Task<bool> PlaceOrder(Order order);
 
         public Task<IEnumerable<Order>> GetOrders();
-        public Task<Order> GetOrderById(string idOrder);
-        public Task<Order> GetOrderByCustomer(string idCustomer);
+        public Task<Order> GetOrderById(int idOrder);
+        public Task<Order> GetOrderByCustomer(int idCustomer);
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiShoppingCart.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231119061112_initial")]
+    [Migration("20231120003713_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,8 +26,11 @@ namespace ApiShoppingCart.Migrations
 
             modelBuilder.Entity("ApiShoppingCart.Models.Order", b =>
                 {
-                    b.Property<string>("IdOrder")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("IdOrder")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdOrder"), 1L, 1);
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
@@ -35,8 +38,8 @@ namespace ApiShoppingCart.Migrations
                     b.Property<string>("CustomerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdCustomer")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdCustomer")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
@@ -54,14 +57,14 @@ namespace ApiShoppingCart.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdOrderItem"), 1L, 1);
 
-                    b.Property<string>("IdBook")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdBook")
+                        .HasColumnType("int");
 
-                    b.Property<string>("IdOrder")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdOrder")
+                        .HasColumnType("int");
 
-                    b.Property<string>("OrderIdOrder")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int?>("OrderIdOrder")
+                        .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");

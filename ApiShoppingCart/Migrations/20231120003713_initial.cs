@@ -13,8 +13,9 @@ namespace ApiShoppingCart.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    IdOrder = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdCustomer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdOrder = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdCustomer = table.Column<int>(type: "int", nullable: false),
                     CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
@@ -30,13 +31,13 @@ namespace ApiShoppingCart.Migrations
                 {
                     IdOrderItem = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdBook = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdBook = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     SubTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IdOrder = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OrderIdOrder = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    IdOrder = table.Column<int>(type: "int", nullable: false),
+                    OrderIdOrder = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

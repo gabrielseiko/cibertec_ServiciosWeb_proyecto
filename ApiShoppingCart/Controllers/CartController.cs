@@ -32,7 +32,7 @@ namespace ApiShoppingCart.Controllers
 
         [HttpGet]
         [Route("GetOrderById/{idOrder}")]
-        public async Task<ActionResult<Order>> GetOrderById(string idOrder)
+        public async Task<ActionResult<Order>> GetOrderById(int idOrder)
         {
             return StatusCode(StatusCodes.Status200OK,
                 await cartRepository.GetOrderById(idOrder));
@@ -40,7 +40,7 @@ namespace ApiShoppingCart.Controllers
 
         [HttpGet]
         [Route("GetOrderByCustomer/{idCustomer}")]
-        public async Task<ActionResult<Order>> GetOrderByCustomer(string idCustomer)
+        public async Task<ActionResult<Order>> GetOrderByCustomer(int idCustomer)
         {
             return StatusCode(StatusCodes.Status200OK,
                 await cartRepository.GetOrderByCustomer(idCustomer));

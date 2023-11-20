@@ -32,7 +32,7 @@ namespace ApiShoppingCart.Repositories
         {
             return await dbContext.Orders.ToListAsync();
         }
-        public async Task<Order> GetOrderByCustomer(string idCustomer)
+        public async Task<Order> GetOrderByCustomer(int idCustomer)
         {
             var order = await dbContext.Orders.Where(o => o.IdCustomer == idCustomer).FirstOrDefaultAsync();
             if(order == null)
@@ -44,7 +44,7 @@ namespace ApiShoppingCart.Repositories
 
  
 
-        public async Task<Order> GetOrderById(string idOrder)
+        public async Task<Order> GetOrderById(int idOrder)
         {
             var order = await dbContext.Orders.Where(o => o.IdOrder == idOrder).FirstOrDefaultAsync();
             if (order == null)

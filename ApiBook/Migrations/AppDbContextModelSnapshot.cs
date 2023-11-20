@@ -32,8 +32,8 @@ namespace ApiBook.Migrations
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdCategory")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdCategory")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
